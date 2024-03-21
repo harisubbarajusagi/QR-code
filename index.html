@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta name="viweport" content="width=device-width,initial-scale=1.0">
+        <title> QR Code generator using html css and javascript</title>
+        <link rel="stylesheet" href="QR.css">
+    </head>
+    <body>
+        <div class="container">
+            <p> Enter Text or URL </p>
+            <input type="text" placeholder="Text or URL" id="qrtext">
+            <div id="imgbox">
+                <img src="" id="qrimage">
+            </div>
+
+            <button onclick="GenerateQR()"> Generate QR code</button>
+        </div>
+
+        <script>
+
+        let imgbox = document.getElementById("imgbox");
+        let qrimage = document.getElementById("qrimage");
+        let qrtext = document.getElementById("qrtext");
+
+        function GenerateQR(){ 
+            /*if(qrtext.value.lenght >0){*/
+                qrimage.src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrtext.value;
+                /*imgbox.classList.add("show-img");*/
+            }
+           /*}*/
+        </script>
+    </body>
+</html>
